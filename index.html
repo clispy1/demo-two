@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Canvas Learn</title>
+		<!-- <link rel="stylesheet" href="/css/style.css" /> -->
+
+		<style>
+			body {
+				margin: 0;
+				width: 100%;
+				height: 80vh;
+			}
+			canvas {
+				background-color: whitesmoke;
+				border: 1px solid black;
+				padding-top: 100px;
+				margin: 20px;
+				/* width: 600;
+				height: 600; */
+			}
+
+			.controls {
+				position: absolute;
+				top: 50px;
+				left: 50%;
+
+				transform: translateX(-50%);
+				font-size: 1.5rem;
+			}
+
+			.controls select {
+				font-family: 'Bai Jamjuree', sans-serif;
+				padding: 10px;
+				font-size: 20px;
+			}
+			option {
+				display: block;
+				padding: 10px;
+				margin: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="controls">
+			<label for="animation">Choose your animation</label>
+			<select name="animation" id="animation">
+				--Select an animation--
+				<option value="idle">Idle</option>
+				<option value="jump">Jump</option>
+				<option value="fall">Fall</option>
+				<option value="run">Run</option>
+				<option value="dizzy">Dizzy</option>
+				<option value="sit">Sit</option>
+				<option value="roll">Roll</option>
+				<option value="bite">Bite</option>
+				<option value="ko">KO</option>
+				<option value="gethit">Get hit</option>
+			</select>
+		</div>
+		<canvas id="canvas"></canvas>
+		<script src="/canvas.js"></script>
+	</body>
+</html>
